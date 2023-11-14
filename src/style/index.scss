@@ -1,0 +1,126 @@
+@use '@carbon/react';
+
+html {
+  height: 100vh !important;
+}
+body,
+#root {
+  height: calc(100vh - 48px) !important;
+  padding: 0;
+  margin: 0;
+}
+.cds--layer-one {
+  height: 100%;
+}
+.cds--header__name--prefix {
+  color: #0f62fe !important;
+  font-weight: 900;
+}
+
+.cds--content {
+  margin-left: 48px !important;
+  margin-top: 0 !important;
+  height: 100%;
+  padding: 50px;
+}
+
+.login-form {
+  width: 40rem;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  *:focus {
+    outline: none;
+  }
+
+  & > form > div > div {
+    width: 100%;
+    .cds--btn-set {
+      .cds--btn {
+        margin-right: 1% !important;
+        width: 49.5%;
+      }
+    }
+    p {
+      font-size: 0.75em;
+      color: rgb(72, 72, 72);
+    }
+  }
+  .cds--form-item {
+    background-color: white;
+  }
+  .cds--btn-set .cds--btn {
+    max-width: 20rem !important;
+  }
+}
+
+.row {
+  margin: 15px 0;
+  & > * {
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box !important;
+    vertical-align: top;
+  }
+  div > h3 {
+    margin: 10px 0;
+  }
+}
+
+.banner {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.live-cam {
+  width: 60%;
+  .broadcast {
+    width: 100%;
+  }
+}
+
+.event-log {
+  width: 40%;
+}
+
+.conversation-log,
+.schedule-log {
+  width: 50% !important;
+  & > * {
+    width: 100%;
+  }
+
+  .cds--btn--primary {
+    margin-left: 15px;
+  }
+}
+
+.cds--form-item,
+.cds--search.cds--toolbar-search-container-expandable {
+  background-color: #f4f4f4;
+  & > * {
+    margin: auto 0 0 auto;
+  }
+}
+
+.cds--toolbar-content {
+  background-color: #f4f4f4;
+}
+
+.cds--search-magnifier-icon {
+  padding: 15px !important;
+}
+
+.cds--data-table tbody {
+  height: 570px;
+
+  tr {
+    max-height: 150px !important;
+  }
+}
+
+.schedule {
+  height: 450px !important;
+}

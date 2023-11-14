@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/layout'
+import Home from './pages/home'
+import Login from './pages/login'
+import './style/index.scss'
+import { Route, Routes } from 'react-router-dom'
+import { getCookie } from './api/cookie'
 
 function App() {
+  if (!localStorage.getItem('token')) return <Login />
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Layout>
+  )
 }
 
-export default App;
+export default App
